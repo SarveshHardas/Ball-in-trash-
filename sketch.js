@@ -20,7 +20,7 @@ function setup() {
 	world = engine.world;
 
 	fill(255);
-	ball=Bodies.circle(250,550,30);
+	ball=Bodies.circle(270,550,30);
     World.add(world,ball);
 
     var ball_options={
@@ -49,10 +49,6 @@ function draw() {
   left.show();
   groundObj.show();
   right.show();
-
-  keyPressed();
-  drawSprites();
-
   Engine.update(engine)
 }
 
@@ -60,8 +56,8 @@ function keyPressed()
 {
 	if(keyCode===UP_ARROW)
 	{
-		Matter.Body.applyForce(ball,{x:0,y:0},{x:0.002,y:0})
-        Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.012})
+		Matter.Body.applyForce(ball,{x:0,y:0},{x:0.1,y:-0.1})
+        
 	}
 }
 
